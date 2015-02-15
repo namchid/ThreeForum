@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf2ef152-b23f-468d-a1ea-a51e2517cf67" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ThreeForum.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/haydenIndex.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ThreeForum.iml" afterPath="$PROJECT_DIR$/.idea/ThreeForum.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ThreeForum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +30,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3068592" vertical-offset="0" max-vertical-offset="554">
-              <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="323">
+              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+              <folding>
+                <marker date="1424022223302" expanded="true" signature="171:256" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="haydenIndex.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/haydenIndex.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_member_counts.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/8-90/MannaMotion/mannamotion/mannamotion/admin/admin_member_counts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="595">
+              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+              <folding>
+                <marker date="1400017320000" expanded="true" signature="19:183" placeholder="SELECT c.pla..customer..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getsocialvideos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/8-90/MannaMotion/mannamotion/mannamotion/admin/getsocialvideos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="527">
+              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="superadmin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/8-90/MannaMotion/mannamotion/mannamotion/admin/superadmin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.037736" vertical-offset="288" max-vertical-offset="2499">
+              <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit_video.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/8-90/MannaMotion/dropMeIn_Admin/edit_video.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="7956">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding>
+                <marker date="1406832831000" expanded="true" signature="2787:2856" placeholder="SELECT count..videos..." />
+                <marker date="1406832831000" expanded="true" signature="3694:3755" placeholder="SELECT * fro..videos..." />
+                <marker date="1406832831000" expanded="true" signature="3794:3849" placeholder="SELECT * fro..videos..." />
+                <marker date="1406832831000" expanded="true" signature="4117:4277" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="4390:4552" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="5452:5610" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="6227:6382" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="6749:6864" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="6893:7013" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="7107:7227" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="7750:7878" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="8071:8195" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="8281:8318" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="9910:9939" placeholder="SELECT * FRO..video_tag_types..." />
+                <marker date="1406832831000" expanded="true" signature="10033:10119" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="10110:10119" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="10354:10413" placeholder="SELECT * FRO..video_tags..." />
+                <marker date="1406832831000" expanded="true" signature="10757:11018" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="10797:10995" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="11221:11250" placeholder="SELECT * FRO..video_tag_types..." />
+                <marker date="1406832831000" expanded="true" signature="11325:11416" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="11408:11416" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="11629:11688" placeholder="SELECT * FRO..video_tags..." />
+                <marker date="1406832831000" expanded="true" signature="12016:12277" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="12056:12254" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="12667:12726" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="13505:13616" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="13679:13803" placeholder="..." />
+                <marker date="1406832831000" expanded="true" signature="13887:14016" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_videos.php" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Desktop/8-90/MannaMotion/dropMeIn_Admin/admin_videos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8170056" vertical-offset="0" max-vertical-offset="1734">
+              <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -59,9 +151,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="260" />
-    <option name="y" value="40" />
-    <option name="width" value="1400" />
+    <option name="x" value="734" />
+    <option name="y" value="62" />
+    <option name="width" value="1180" />
     <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -71,7 +163,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -114,8 +206,18 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="JavaScript.Libraries" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FullScreen" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ThreeForum/index.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
@@ -136,9 +238,19 @@
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="cf2ef152-b23f-468d-a1ea-a51e2517cf67" name="Default" comment="" />
@@ -149,8 +261,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="40" width="1400" height="1000" extended-state="0" />
-    <editor active="true" />
+    <frame x="734" y="62" width="1180" height="1000" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -158,7 +270,9 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27011493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3208191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32964602" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -167,8 +281,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -196,8 +308,98 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3068592" vertical-offset="0" max-vertical-offset="554">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="323">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding>
+            <marker date="1424022223302" expanded="true" signature="171:256" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/haydenIndex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/8-90/MannaMotion/mannamotion/mannamotion/admin/admin_member_counts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="595">
+          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+          <folding>
+            <marker date="1400017320000" expanded="true" signature="19:183" placeholder="SELECT c.pla..customer..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/8-90/MannaMotion/mannamotion/mannamotion/admin/sendwelcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39891696" vertical-offset="0" max-vertical-offset="554">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/8-90/MannaMotion/mannamotion/mannamotion/admin/getsocialvideos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="527">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/8-90/MannaMotion/mannamotion/mannamotion/admin/superadmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.037736" vertical-offset="288" max-vertical-offset="2499">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/8-90/MannaMotion/dropMeIn_Admin/edit_video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="7956">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <marker date="1406832831000" expanded="true" signature="2787:2856" placeholder="SELECT count..videos..." />
+            <marker date="1406832831000" expanded="true" signature="3694:3755" placeholder="SELECT * fro..videos..." />
+            <marker date="1406832831000" expanded="true" signature="3794:3849" placeholder="SELECT * fro..videos..." />
+            <marker date="1406832831000" expanded="true" signature="4117:4277" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="4390:4552" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="5452:5610" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="6227:6382" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="6749:6864" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="6893:7013" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="7107:7227" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="7750:7878" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="8071:8195" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="8281:8318" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="9910:9939" placeholder="SELECT * FRO..video_tag_types..." />
+            <marker date="1406832831000" expanded="true" signature="10033:10119" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="10110:10119" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="10354:10413" placeholder="SELECT * FRO..video_tags..." />
+            <marker date="1406832831000" expanded="true" signature="10757:11018" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="10797:10995" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="11221:11250" placeholder="SELECT * FRO..video_tag_types..." />
+            <marker date="1406832831000" expanded="true" signature="11325:11416" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="11408:11416" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="11629:11688" placeholder="SELECT * FRO..video_tags..." />
+            <marker date="1406832831000" expanded="true" signature="12016:12277" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="12056:12254" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="12667:12726" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="13505:13616" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="13679:13803" placeholder="..." />
+            <marker date="1406832831000" expanded="true" signature="13887:14016" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/8-90/MannaMotion/dropMeIn_Admin/admin_videos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8170056" vertical-offset="0" max-vertical-offset="1734">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
           <folding />
         </state>
       </provider>
