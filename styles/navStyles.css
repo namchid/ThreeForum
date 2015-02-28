@@ -86,7 +86,8 @@ nav ul li a {
 #mainContainer {
     background-color: #3c7963;
     width: 100%;
-    height: 400px;
+    height: 100vw;
     float: right;
     margin-top: 10px;
+    color: #f4eff2;
 }
