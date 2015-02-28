@@ -20,7 +20,8 @@
 }
 
 .picContainer {
-
+    float: left;
+    padding-right: 10px;
 }
 
 .titleContainer {
