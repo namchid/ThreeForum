@@ -51,3 +51,7 @@ nav ul li a {
     color: #069;
     border-right: 1px solid #ccc;
 }
+
+#currentNav {
+    color: #b32f56;
+}
