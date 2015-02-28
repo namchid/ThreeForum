@@ -19,12 +19,22 @@
     padding: 5px
 }
 
-.picContainer {
+.category:hover {
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+.pic {
     float: left;
     padding-right: 10px;
 }
 
-.titleContainer {
+.title {
     font-size: 25px;
     text-transform: lowercase;
+}
+
+.category a {
+    color: white;
+    text-decoration: none;
 }
