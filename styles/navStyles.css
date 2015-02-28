@@ -34,7 +34,6 @@ nav {
 
 nav ul {
     list-style: none;
-    width: 800px;
     margin: 0 auto;
     padding: 0;
 }
@@ -54,4 +53,12 @@ nav ul li a {
 
 #currentNav {
     color: #b32f56;
+}
+
+#mainContainer {
+    background-color: #3c7963;
+    width: 100%;
+    height: 400px;
+    float: right;
+    margin-top: 10px;
 }
