@@ -1,0 +1,58 @@
+mainContainer > table, th, td {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+    margin: 40px 0 auto;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: normal;
+    padding: 10px 0;
+}
+
+table {
+    /*margin-top: 10px;*/
+    width: 100%;
+}
+
+table td {
+    padding-right: 15px;
+    padding-left: 15px;
+    text-transform: lowercase;
+    overflow-x: hidden;
+}
+
+.user {
+    width: 200px;
+    text-align: center;
+    /*display: block;*/
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+.userImage {
+    width:100px;
+    height:100px;
+    padding: 0;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+}
+
+.userInfo tr, td, th {
+    padding: 0;
+    color:purple;
+}
+
+.user > .userInfo td {
+    padding: 0 5px;
+    background-color: gainsboro;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0
+}
+
+.postNum {
+    width: 10px;
+}
