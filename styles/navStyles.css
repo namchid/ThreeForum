@@ -92,3 +92,17 @@ nav ul li a {
     color: #f4eff2;
     padding-bottom: 100px;
 }
+
+#breadCrumbs {
+    font-style: italic;
+    padding: 5px 15px;
+    color: black;
+}
+
+#breadCrumbs a {
+    color: gold;
+}
+
+.visited {
+    color: #c3cbff;
+}
