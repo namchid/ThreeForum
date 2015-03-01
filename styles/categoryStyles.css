@@ -40,7 +40,7 @@ table, th, td {
     border-bottom: 1px solid black;
     border-collapse: collapse;
     margin: 40px 0 auto;
-    font-size: 15px;
+    font-size: 18px;
     text-decoration: none;
     font-weight: normal;
     padding: 10px 0;
@@ -63,7 +63,11 @@ td {
     overflow-x: hidden;
 }
 
-
 .topicTitle {
     width: 40%;
+}
+
+
+tr:hover {
+    background-color: mediumaquamarine;
 }

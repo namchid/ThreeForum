@@ -2,9 +2,45 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Topic Title</title>
+    <link rel="stylesheet" type="text/css" href="styles/navStyles.css">
+    <link rel="stylesheet" type="text/css" href="styles/forumStyles.css">
+    <link rel="stylesheet" type="text/css" href="styles/topicStyles.css">
 </head>
 <body>
-
+<header>
+    <div id="siteName">ThreeForum</div>
+    <div id="userLoggedIn">
+        Welcome, User
+        <br>
+        <a href="login.html">Logout</a>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a href="" class="currentNav">Forum</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+        <li><a href="about.html">About ThreeForum</a></li>
+        <li><a href="https://github.com/namchid/ThreeForum" target="_blank">View on GitHub</a></li>
+    </ul>
+</nav>
+<div id="subNav">
+    <ul>
+        <li>Search Forums</li>
+        <li>Recent Posts</li>
+    </ul>
+</div>
+<div id="mainContainer">
+    <div id="boards">
+        {Title of Topic Goes Here}
+        <!-- todo: add a "+" button to create new post-->
+    </div>
+    <hr>
+    <div id="breadCrumbs">
+        <a href="forum.html">Forum</a> >
+        <a href="category.html">{Title of Category} </a> >
+        <span class="visited"> {Title of Topic goes here}</span>
+    </div>
+</div>
 </body>
 </html>
