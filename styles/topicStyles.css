@@ -1,37 +1,28 @@
-mainContainer > table, th, td {
+table.post {
     border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
     border-collapse: collapse;
     margin: 40px 0 auto;
     font-size: 18px;
     text-decoration: none;
     font-weight: normal;
     padding: 10px 0;
-}
-
-table {
-    /*margin-top: 10px;*/
     width: 100%;
 }
 
-table td {
-    padding-right: 15px;
-    padding-left: 15px;
-    text-transform: lowercase;
-    overflow-x: hidden;
+
+td.user {
+    width: 100px;
 }
 
-.user {
-    width: 200px;
+.userInfo {
     text-align: center;
-    /*display: block;*/
-    margin: 0 auto;
+    background-color: #979797;
     padding: 0;
 }
 
-
-.userImage {
+img.userImage {
     width:100px;
     height:100px;
     padding: 0;
@@ -40,19 +31,79 @@ table td {
     -moz-border-radius: 50px;
 }
 
-.userInfo tr, td, th {
+.message {
     padding: 0;
-    color:purple;
+    margin: 0;
+    text-align: left;
+    background-color: blue;
 }
 
-.user > .userInfo td {
-    padding: 0 5px;
-    background-color: gainsboro;
-    border-right: 0;
-    border-top: 0;
-    border-bottom: 0
-}
+/*#mainContainer > table, #mainContainer > th, #mainContainer > td {*/
+    /*border-right: 1px solid black;*/
+    /*border-bottom: 3px solid black;*/
+    /*border-top: 3px solid black;*/
+    /*border-collapse: collapse;*/
+    /*margin: 40px 0 auto;*/
+    /*font-size: 18px;*/
+    /*text-decoration: none;*/
+    /*font-weight: normal;*/
+    /*padding: 10px 0;*/
+/*}*/
 
-.postNum {
-    width: 10px;
-}
+/*table {*/
+    /*margin-top: 10px;*/
+    /*width: 100%;*/
+/*}*/
+
+/*table td {*/
+    /*padding-right: 15px;*/
+    /*padding-left: 15px;*/
+    /*text-transform: lowercase;*/
+    /*overflow-x: hidden;*/
+/*}*/
+
+/*.user {*/
+    /*width: 200px;*/
+    /*text-align: center;*/
+    /*display: block;*/
+    /*margin: 0 0 100px 0;*/
+    /*height: 100px;*/
+    /*padding: 0;*/
+/*}*/
+
+
+/*.userImage {*/
+    /*width:100px;*/
+    /*height:100px;*/
+    /*padding: 0;*/
+    /*border-radius: 50px;*/
+    /*-webkit-border-radius: 50px;*/
+    /*-moz-border-radius: 50px;*/
+/*}*/
+
+/*table.userInfo {*/
+    /*padding: 0;*/
+    /*color: #d73867;*/
+/*}*/
+
+/*.user > .userInfo td {*/
+    /*padding: 0 5px;*/
+    /*background-color: gainsboro;*/
+    /*border-right: 0;*/
+    /*border-top: 0;*/
+    /*border-bottom: 0*/
+/*}*/
+
+/*td.post {*/
+    /*margin-top: 0;*/
+    /*padding-top: 0;*/
+    /*height: 100%;*/
+/*}*/
+
+/*tr > td > .post {*/
+    /*background-color: blue;*/
+/*}*/
+
+/*.postNum {*/
+    /*width: 10px;*/
+/*}*/
