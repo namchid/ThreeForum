@@ -4,8 +4,8 @@ echo "<header>ThreeForum</header>";
 
 echo "<div id='cssmenu'>";
 echo "<ul>";
-   echo "<li><a href='#'><span>Home</span></a></li>";
-   echo "<li class='active has-sub'><a href='#'><span class='current'>Forum</span></a>";
+   echo "<li><a href='#Profile'><span>My Profile</span></a></li>";
+   echo "<li class='active has-sub'><a href='forum.php'><span class='current'>Forum</span></a>";
       echo "<ul>";
          echo "<li><a href='#'><span>Product 1</span></a>";
          echo "</li>";

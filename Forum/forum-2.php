@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
 	<meta charset="utf-8">
-	<title>Sub-Forum</title>
+	<title>Topics</title>
 	<link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>	
@@ -30,6 +30,13 @@
 				<li><a>3</a></li>
 			</ul>
 		</div>
+		<div class="add-area">
+			<form action="newTopicForm.php" method="post">
+				<button class="add-button" id="add-topic-button">Add New Topic</button> 
+			</form>
+			<!--
+			<button type="button" onclick="location.href='newTopicForm.php';">Add New Topic</button>	-->
+		</div>
 		<table id="forum-2-table">
 			<tr>
 				<th class="topic-title">Title</th>
@@ -39,7 +46,7 @@
 				<th class="topic-last">Last Message</th>
 			</tr>
                         <tr class="topic">
-                                <td class="topic-title"><a href="https://www.google.com">The Horrors of Debugging PHP</a></td>
+                                <td class="topic-title"><a href="posts.php">The Horrors of Debugging PHP</a></td>
                                 <td class="topic-start-date">3/9/15</td>
                                 <td class="topic-replies">2</td>
                                 <td class="topic-views">10</td>
@@ -53,24 +60,7 @@
                                 <td class="topic-last">her_majesty</td>
                         </tr>
 		</table>
-<!--
-		<div class="topics">
-			<ul>
-				<li>
-					<div><a class="topic-title">The Horrors of Debugging PHP</a></div>
-					<div><a class="sub">3/9/2015</a></div>
-				</li>
-				<li>
-					<div>Replies: 2</div>
-					<div class="sub">Views: 10</div>
-				</li>
-				<li>
-					<div>her_highness</div>
-					<div>a moment ago</div>
-				</li>
-			</ul>
-		</div>
-	</div> -->
+	</div>
 	<canvas id="c" z-index="-2"></canvas>
 </body>
 </html>
