@@ -1,3 +1,17 @@
+<?php
+/** * User: Hayden H */
+$server = "localhost";
+$database = "threeforum";
+$username = "root";
+$password = "112358mysql";
+
+$connect = mysqli_connect($server,$username,$password,$database)   or die("Error in connect: " . mysqli_error($connect));
+?>
+
+<?php
+$topic_id ="";
+$topic_id = $_POST['topic_id'];
+?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -32,37 +46,43 @@
 		</div>
 		<div id="posts">
 			<table id="posts-table">
-				<tr>
+                <?php
+                $postquery = ' SELECT * FROM posts WHERE topic_id = "'.$topic_id.'" ORDER BY post_id ASC    ;';
+                $postresult = mysqli_query($connect,$postquery);
+                $postcount = 1;
+                while($row = mysqli_fetch_array($postresult)) {
+
+                    $userquery = ' SELECT * FROM users WHERE user_id = "'.$row['user_id'].'" ;';
+                    $userresult = mysqli_query($connect,$userquery);
+                    $username = "";
+                    while($user = mysqli_fetch_array($userresult)) {
+                        if($user['user_name'] != "")
+                            $username = $user['user_name'];
+                    }
+                    $userresult->close();
+                    echo '
+                    <tr>
 					<td class="user">
 						<img src="resources/images/aang.png" class="user-image">
 					</td>
 					<td class="message-body">
-						I'm the avatar!
-					</td>		
-					<td class="post-num">#1</td>
-				</tr>
-				<tr>
+						'.$row['post_content'].'
+					</td>
+					<td class="post-num">#'.$postcount.'</td>
+		    		</tr>
+			    	<tr>
 					<td colspan="3" class="edit-post">
-                                                <span class="username-field">aang</span>
+                                                <span class="username-field">'.$username.'</span>
                                                 <span class="edit" onclick="updatePostLabel()">edit post</span>
                                         </td>
 
-				</tr>
-			 	<tr>
-                                	<td class="user">
-                                                  <img src="resources/images/zuko.png" class="user-image">
-                                	</td>
-                               	 	<td class="message-body">
-                                        	Wrong topic, Avatar. I have redeemed my honor!
-                                	</td>           
-                                	<td class="post-num">#1</td>
-                        	</tr>
-                        	<tr> 
-                                	<td colspan="3" class="edit-post">
-                                		<span class="username-field">zuko</span>
-						<span class="edit" onclick="updatePostLabel()">edit post</span>
-					</td>
-                        	</tr>
+			    	</tr>
+                    ';
+                    $postcount +=1;
+                }
+                $postresult->close();
+                ?>
+
 			</table>
 		</div>
 		<h3 id="new-post-label">New Post</h3>

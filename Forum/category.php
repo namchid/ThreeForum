@@ -51,6 +51,8 @@ $board_name = $_POST['board_name'];
             <li><a>3</a></li>
         </ul>
     </div>
+    <form method="post" id="toTopic" action="posts.php">
+
     <table id="forum-2-table">
         <tr>
             <th class="topic-title">Title</th>
@@ -69,7 +71,7 @@ $board_name = $_POST['board_name'];
             while($row = mysqli_fetch_array($result)) {
                 $topic_id = $row['topic_id'];
 
-                echo ' <tr class="topic">
+                echo ' <tr class="topic" title="'.$row['topic_id'].'" >
                     <td class="topic-title"><a href="#">'.$row['topic_subject'].'</a></td>
                     <td class="topic-start-date">'.$row['topic_date'].'</td>
                 ';
@@ -78,11 +80,12 @@ $board_name = $_POST['board_name'];
                 $countresult = mysqli_query($connect, $countquery);
                 $count = -1;
                 while($countrow = mysqli_fetch_array($countresult)) {
-                    $count = $countrow['cnt'];
+                    $count = (int)$countrow['cnt'] - 1;
                 }
+                $countresult->close();
 
                 echo ' <td class="topic-replies">'.$count.'</td>   ';
-                echo'  <td class="topic-views">TopID=?'.$topic_id.'</td> ';
+                echo'  <td class="topic-views">TO-DO!!!</td> ';
 
                 $lastquery = 'SELECT * FROM users WHERE users.user_id =
                     (SELECT user_id FROM posts WHERE posts.topic_id ='.$row['topic_id'].' ORDER BY posts.post_id DESC LIMIT 1)
@@ -93,16 +96,40 @@ $board_name = $_POST['board_name'];
                 while($lastrow = mysqli_fetch_array($lastresult)){
                     $last = $lastrow['user_name'];
                 }
+                $lastresult->close();
 
                 echo ' <td class="topic-last">'.$last.'</td>';
                 echo ' </tr> ';
             }
-        ?>
+        $result->close();
 
+        echoHiddenInput("topic_id", "-1");
+        ?>
     </table>
-    </div>
+    </form>
+    <canvas id="c" z-index="-2"></canvas>
+
+</div>
 </body>
 </html>
 <?php
+function echoHiddenInput($name, $value){
+    echo ' <input id="'.$name.'" type="hidden" name ="'.$name.'" value="-1" style="display:none" >';
+}
+?>
+
+<?php
 mysqli_close($connect);
 ?>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('tr.topic').click(function (event){
+            var topic_id = this.title;
+            $('#topic_id').val(topic_id);
+           // alert("topic ="+topic_id+ "  #topic_id's val = "+$('#topic_id').val()+ "   this.title= "+this.title);
+            document.getElementById('toTopic').submit();
+        });
+
+    });
+</script>

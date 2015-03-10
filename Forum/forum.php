@@ -17,10 +17,17 @@
 	<div id="navBar"></div>
 	<div id="mainContainer">
 	<!-- todo: remove things below later-->
-		<div class="subtitle">Forum Boards</div>
+
+
+        <div class="subtitle">Forum Boards</div>
 		<ul class="breadcrumb">
 			<li><a>Forum</a></li>
 		</ul>
+        <?php
+        include("forum_insert.php");
+        ?>
+
+        <!--
 		<h2>Technology</h2>
 			<div>
 				<a class="category" href="forum-2.php">Coding Challenges</a>
@@ -30,7 +37,7 @@
 			</div>
 			<div>
 				<a class="category" href="">Why Apple > Windows</a>
-			<div>
+			</div>
 		<h2>Entertainment</h2>
 			<div>
 				<a class="category" href="">Good old fashioned board games</a>
@@ -41,8 +48,9 @@
 		<h2>Random</h2>
 			<div>
 				<a class="category" href="">Pictures of cats</a>
-	
-	</div>
+	        </div>
+    -->
 	<canvas id="c" z-index="-2"></canvas>
+</div>
 </body>
 </html>
