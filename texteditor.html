@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script src="tinymce/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+    plugins: [
+        "advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste"
+    ],
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+});
+</script>
+<script>
+function submitClick(){
+ var formatted_input =  tinymce.activeEditor.getContent();
+ document.getElementById("f_input").value = formatted_input;
+ alert (document.getElementById("f_input").value);
+
+ document.Test.action = "http://dias11.cs.trinity.edu/~bpauls/WebApps/editor.php";
+ document.Test.submit(); 
+};
+
+</script>
+<body>
+<form name="Test" method="post" action="">
+    <textarea  name="content" id='content' style="width:50%"></textarea>
+    </br>
+    </br>
+    <input type="hidden" id="f_input" name="formatted_input"/> 
+    <input type="button" value="Submit" onclick="submitClick()"></input>
+</form>
+</body>
+</html>
