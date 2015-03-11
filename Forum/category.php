@@ -2,12 +2,15 @@
 /**
  * User: Hayden H
  */
+/*
 $server = "localhost";
 $database = "threeforum";
 $username = "root";
 $password = "112358mysql";
 
 $connect = mysqli_connect($server,$username,$password,$database)   or die("Error in connect: " . mysqli_error($connect));
+*/
+include_once("connect.php");
 ?>
 
 
@@ -104,6 +107,7 @@ $board_name = $_POST['board_name'];
         $result->close();
 
         echoHiddenInput("topic_id", "-1");
+        echoHiddenInput("page", "1");
         ?>
     </table>
     </form>
@@ -114,7 +118,7 @@ $board_name = $_POST['board_name'];
 </html>
 <?php
 function echoHiddenInput($name, $value){
-    echo ' <input id="'.$name.'" type="hidden" name ="'.$name.'" value="-1" style="display:none" >';
+    echo ' <input id="'.$name.'" type="hidden" name ="'.$name.'" value="'.$value.'" style="display:none" >';
 }
 ?>
 

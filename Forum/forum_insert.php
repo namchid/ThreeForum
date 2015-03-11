@@ -1,11 +1,14 @@
 <?php
 /** * User: Hayden H */
+/*
 $server = "localhost";
 $database = "threeforum";
 $username = "root";
 $password = "112358mysql";
 
 $connect = mysqli_connect($server,$username,$password,$database)   or die("Error in connect: " . mysqli_error($connect));
+*/
+include_once("connect.php");
 ?>
 
 <form method="post" id="toCategory" action="category.php">
