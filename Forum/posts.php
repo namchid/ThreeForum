@@ -57,7 +57,8 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
             $realcount = $countrow['cnt'];
         }
         (int)$numpages = (int)$realcount / (int)$postsperpage;
-        $numpages %= 1; $numpages+=1;
+        if($numpages > intval($numpages))
+            $numpages= intval($numpages +1);
         $countresult->close();
 
 

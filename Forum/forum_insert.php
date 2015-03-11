@@ -9,6 +9,7 @@ $password = "112358mysql";
 $connect = mysqli_connect($server,$username,$password,$database)   or die("Error in connect: " . mysqli_error($connect));
 */
 include_once("connect.php");
+include_once("functions.php");
 ?>
 
 <form method="post" id="toCategory" action="category.php">
@@ -18,6 +19,9 @@ include_once("connect.php");
     echoHiddenInput("cat_id","x");
     echoHiddenInput("board_id","x");
     echoHiddenInput("board_name","x");
+    echoHiddenInput("myPage","1");
+
+    echo '</form>';
 
     $query = 'SELECT * FROM boards ORDER BY board_id ASC;';
     //or die("Error in the consult.." . mysqli_error($link));
@@ -36,16 +40,6 @@ include_once("connect.php");
     }
     $result->close();
     ?>
-    <!-- Ideally, these categories would have id nums (name="" value="")-->
-
-</form>
-
-
-<?php
-function echoHiddenInput($name, $value){
-    echo ' <input id="'.$name.'" type="hidden" name ="'.$name.'" value="'.$value.'" style="display:none" >';
-}
-?>
 
 <?php
 mysqli_close($connect);
@@ -69,10 +63,5 @@ $(document).ready(function () {
          document.getElementById('toCategory').submit();
 
     });
-    function setcontent(data) {
-        //$('#mainContainer').html(data);
-      //  window.location.href = "category.php";
-        console.log("should have set content to category.php");
-    }
 });
 </script>

@@ -11,17 +11,21 @@ $password = "112358mysql";
 $connect = mysqli_connect($server,$username,$password,$database)   or die("Error in connect: " . mysqli_error($connect));
 */
 include_once("connect.php");
+include_once("functions.php");
 ?>
 
 
 <?php
-$cat_name = $cat_id = $board_id = $baord_name = "";
+$cat_name = $cat_id = $board_id = $board_name = "";
 
 $cat_name = $_POST['cat_name'];
 $cat_id = $_POST['cat_id'];
 $board_id = $_POST['board_id'];
 $board_name = $_POST['board_name'];
+$page = $_POST['myPage'];
 
+$topics_per_page = 10;
+$starting_limit = ((int)$page -1) * (int)$topics_per_page ;
 ?>
     <!DOCTYPE HTML>
     <html>
@@ -46,14 +50,37 @@ $board_name = $_POST['board_name'];
         <li><a href="forum.php">Forum</a></li>
         <li><a>Category: <?php echo $board_name ?></a></li>
     </ul>
-    <div id="pageNav">
+
+    <?php
+
+    $countquery =' SELECT count(*) AS cnt FROM topics WHERE cat_id = "'.$cat_id.'" ORDER BY topic_id ASC ;';
+    $countresult = mysqli_query($connect, $countquery);
+    $realcount = "0";
+    while($countrow = mysqli_fetch_array($countresult)) {
+    $realcount = $countrow['cnt'];
+    }
+    (int)$numpages = (int)$realcount / (int)$topics_per_page;
+    if($numpages > intval($numpages))
+        $numpages= intval($numpages +1);
+    $countresult->close();
+
+
+    $pagenames = array("myPage","cat_name", "cat_id", "board_id","board_name");
+    $pagevals = array("1",      $cat_name,  $cat_id,  $board_id, $board_name);
+    echo'<div id="pageNav">
         <ul>
-            <li>page 1 of 3</li>
-            <li><a class="current" href="#">1</a></li>
-            <li><a>2</a></li>
-            <li><a>3</a></li>
-        </ul>
+            <li>page '.$page.' of '.$numpages.'</li> ';
+            for ($i =1; $i <= $numpages; $i++){
+            echo'<li class="page" value="'.$i.'" title ="'.$i.'"><a class="current" href="#">'.($i).'</a></li>';
+            }
+            echo'	</ul>
     </div>
+    ';
+    EchoForm("category.php","pagesForm",$pagenames,$pagevals);
+
+    ?>
+
+
     <form method="post" id="toTopic" action="posts.php">
 
     <table id="forum-2-table">
@@ -65,7 +92,7 @@ $board_name = $_POST['board_name'];
             <th class="topic-last">Last Message</th>
         </tr>
         <?php
-            $query = 'SELECT * FROM topics WHERE cat_id ="'.$cat_id.'";';
+            $query = 'SELECT * FROM topics WHERE cat_id ="'.$cat_id.'" LIMIT '.$starting_limit.', '.$topics_per_page.' ;';
             //or die("Error in the consult.." . mysqli_error($link));
 
             $result = mysqli_query($connect, $query);
@@ -116,11 +143,7 @@ $board_name = $_POST['board_name'];
 </div>
 </body>
 </html>
-<?php
-function echoHiddenInput($name, $value){
-    echo ' <input id="'.$name.'" type="hidden" name ="'.$name.'" value="'.$value.'" style="display:none" >';
-}
-?>
+
 
 <?php
 mysqli_close($connect);
@@ -134,6 +157,10 @@ mysqli_close($connect);
            // alert("topic ="+topic_id+ "  #topic_id's val = "+$('#topic_id').val()+ "   this.title= "+this.title);
             document.getElementById('toTopic').submit();
         });
-
+        $('#pageNav li.page').click(function (event){
+            var clickedPage = this.value;
+            $('#myPage').val(clickedPage);
+            document.getElementById('pagesForm').submit();
+        });
     });
 </script>
