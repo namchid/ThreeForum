@@ -5,7 +5,7 @@ $dbhost = 'localhost';
   $dbpass = '0742985';
   $dbname = 'bpauls';
 
-$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die("Error in connect: " . mysqli_error($conn);
+$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die("Error in connect: " . mysqli_error($conn));
 $connect = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die("Error in connect: " . mysqli_error($connect));
 
 if (mysqli_connect_errno())
