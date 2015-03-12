@@ -123,6 +123,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 	color: black;
 }
 
+/* MEDIA QUERIES */
+@media screen and (max-width: 700px) {
+	.breadcrumb {
+		display: none;
+	}
+}
+
 /**
 #pageNav {
         list-style: none;
@@ -348,12 +355,18 @@ table#forum-2-table td, table#forum-2-table th {
 	margin: 50px auto 50px 50px;
 }
 
-#posts-table {
+.posts-table {
 	width: 100%;
+	margin-top: 20px;
+	border: 1px solid white;
+	border-radius: 15px;
 }
 
+#posts:first-child {
+	margin-top: 0;
+}
 
-#posts-table tr, td{
+.posts-table tr, td{
 	/** margin: 0 50px 100px 50px; */
 	font-family: 'Cutive Mono', sans-serif;
 	font-size: 17px;

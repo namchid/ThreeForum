@@ -1,16 +1,20 @@
 var postLabel;
 
 $(function() {
+	/**
 	var smallest = 700;
 	var hidden = false;
-	var breadcrumb = $(".breadcrumb");
+	var breadcrumb = $(".breadcrumb"); */
 	postLabel = $("#new-post-label");
-	
+
+	/**	
 	function resetBreadcrumb() {
 		hidden = false;
 		breadcrumb.show();		
 	}
+	*/
 
+	/**
 	function reactBreadcrumb() {
 		if(window.innerWidth < smallest && !hidden) {
 			breadcrumb.hide();
@@ -22,11 +26,12 @@ $(function() {
 	}
 
 	reactBreadcrumb();
+	
 
 	$(window).resize(function() {
 		reactBreadcrumb();
 	});
-
+	*/
 
 });
 

@@ -17,16 +17,48 @@
         <div id="navBar"></div>
         <div id="mainContainer">
                 <div class="subtitle">About Us</div>
-		<div id="about-us-area">
-			Cool facts about us here.
-		</div>
+			<div id="about-us-area">
+				<div id="brittney">
+					<div class="picture">
+						<img src="resources/images/Grumpy_Cat.png">
+					</div>
+					<div class="about-worker-ant">
+						<h5>Brittney</h5>
+						This is what Brittney did.
+					</div>
+				</div>
+				<div id="hayden">
+					<div class="picture">
+						<img src="resources/images/Grumpy_Cat.png">
+					</div>
+					<div class="about-worker-ant">
+						<h5>Hayden</h5>
+						This is what Hayden did.
+					</div>
+				</div>
+				<div id="namchi">
+					<div id="inner-namchi">
+					<div class="picture">
+						<img src="resources/images/Grumpy_Cat.png">
+					</div>
+					<div class="about-worker-ant">
+						<h5>Namchi</h5>
+						This is what Namchi did.
+					</div>
+					</div>
+				</div>
+			</div>
 		<div class="subtitle">Credits / Resources</div>
         	<div id="resources-area">
+			<ul id="resources">
+				<li>Gradient background <a href="">generator</a></li>
+				<li>Background matrix based on <a href="">this awesome tutorial</a></li>
+				<li>Menu modified from <a href="">this one</a> from CSS Mend Builder</li>
+				<li>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></li>
 
+			</ul>
 		</div>
-		</div>
+	</div>
         <canvas id="c"></canvas>
 </body>
 </html>
-
-

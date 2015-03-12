@@ -103,24 +103,14 @@ a {
 	color: gold;
 }
 
-/*
-.edit-icon {
-	margin-left: 10%;
-	background-color: red;
-	text-align: right;
-	height: 20px;
-	margin-bottom: 5px;
-	margin-right: 10px;
-}
-*/
 
 .edit-icon {
-	background-color: #333;
-	width: 10px;
-	height: 10px;
+	background-color: rgba(255, 255, 255, .9);
+	width: 15px;
+	height: 15px;
 	border-radius: 5px;
 	margin: 0;
-	padding: 5px;
+	padding: 2px;
 	float: right;
 	/* box-shadow: -2px 2px 1px #555; */
 	border: 1px solid white;

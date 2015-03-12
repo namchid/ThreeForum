@@ -49,15 +49,23 @@ $(function() {
         }
 
 
-	if(window.innerWidth < smallest) {
-		breadcrumbs.hide();
-		hidden = true;
-	} else {
-		breadcrumbs.show();
-		hidden = false;
+/** USING MEDIA QUERIES NOW 
+	function showBreadcrumbs() {
+		if(window.innerWidth < smallest) {
+			breadcrumbs.hide();
+			hidden = true;
+		} else {
+			breadcrumbs.show();
+			hidden = false;
+		}
 	}
+*/
+
+	//showBreadcrumbs();
 
 	$(window).resize(function() {
+
+		/**
 		if(window.innerWidth < smallest && !hidden) {
 			breadcrumbs.hide();
 			hidden = true;
@@ -65,6 +73,8 @@ $(function() {
 			breadcrumbs.show();
 			hidden = false;
 		}
+		*/
+		//showBreadcrumbs();
 
 		$("forum-2-table").css("width", (window.innerWidth - 20) + "px");
 		if(window.innerWidth > 1000) {
