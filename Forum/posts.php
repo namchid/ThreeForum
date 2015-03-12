@@ -1,13 +1,5 @@
 <?php
 /** * User: Hayden H */
-/*
-$server = "localhost";
-$database = "threeforum";
-$username = "root";
-$password = "112358mysql";
-
-$connect = mysqli_connect($server,$username,$password,$database)   or die("Error in connect: " . mysqli_error($connect));
-*/
 ?>
 
 <?php
@@ -42,10 +34,33 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
 <body>
 	<div id="navBar"></div>
 	<div id="mainContainer">
-		<div class="subtitle">The Horrors of Debugging PHP</div>
+        <?php
+        $topic_name = "n/a";
+        $query_topic_name = 'SELECT * FROM topics WHERE topic_id = '.$topic_id.' ;';
+        $result_topic_name = mysqli_query($connect, $query_topic_name);
+        while($row_topic_name = mysqli_fetch_array($result_topic_name)) {
+            $topic_name = $row_topic_name['topic_subject'];
+        }
+        $result_topic_name->close();
+
+        $board_id = $board_name = $cat_name = $cat_id = "X";
+        $query_cat_board = ' SELECT c.*, b.* FROM topics t
+                        INNER JOIN categories c ON t.cat_id = c.cat_id
+                        INNER JOIN boards b ON c.board_id = b.board_id
+                        WHERE t.topic_id = '.$topic_id.';';
+        $result_cat_board = mysqli_query($connect, $query_cat_board);
+        while($row_cb = mysqli_fetch_array($result_cat_board)){
+            $board_id = $row_cb['board_id'];
+            $board_name = $row_cb['board_name'];
+            $cat_name = $row_cb['cat_name'];
+            $cat_id = $row_cb['cat_id'];
+        }
+        ?>
+
+		<div class="subtitle"><?php echo $topic_name ?></div>
 		<ul class="breadcrumb">
 			<li><a href="forum.php">Forum</a></li>
-			<li><a href="forum-2.php">Category</a></li>
+			<li><a href="#" class="toCategory">Category</a></li>
 			<li><a>Posts</a></li> 
 		</ul>
         <?php
@@ -75,6 +90,7 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
         ';
         EchoForm("posts.php","pagesForm",$pagenames,$pagevals);
         EchoForm("profile.php","profileForm", array("user_id"), array("x"));
+        EchoForm("category.php","categoryForm", array("cat_id","cat_name","board_id","board_name","myPage"), array($cat_id, $cat_name, $board_id, $board_name,"1"));
         ?>
 
 		<div id="posts">
@@ -143,6 +159,9 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
             var userid = event.target.title;
             $('#user_id').val(userid);
             document.getElementById('profileForm').submit();
+        });
+        $('*.toCategory').click(function (event){
+            document.getElementById('categoryForm').submit();
         });
     });
 </script>

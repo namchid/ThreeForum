@@ -103,7 +103,7 @@ $starting_limit = ((int)$page -1) * (int)$topics_per_page ;
                     <td class="topic-start-date">'.$row['topic_date'].'</td>
                 ';
 
-                $countquery = ' SELECT count(*) AS cnt FROM threeforum.posts  WHERE topic_id= "'.$row['topic_id'].'";';
+                $countquery = ' SELECT count(*) AS cnt FROM posts  WHERE topic_id= "'.$row['topic_id'].'";';
                 $countresult = mysqli_query($connect, $countquery);
                 $count = -1;
                 while($countrow = mysqli_fetch_array($countresult)) {

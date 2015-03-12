@@ -56,7 +56,7 @@ if($current_year - $last_year)
     $last_post = $last_post .' '. (int)($current_year - $last_year) .' year(s)' ;
 if($current_day-$last_day || $current_month-$last_month || $current_year-$last_year) {
     $last_post = $last_post . " ago";
-    $last_post = $last_month. '-'.$last_day.'-'.$last_year ;
+    $last_post = $last_month. ' - '.$last_day.' - '.$last_year ;
     }
 else
     $last_post = "today";
@@ -90,7 +90,7 @@ else
 				<div id="stats-area">
 					<table id="user-stats-table">
 						<tr>
-							<td class="col-one">Joined:</td>
+							<td class="col-one">Email:</td>
 							<td><?php echo $user_date; ?></td>
 						</tr>
 						<tr>
