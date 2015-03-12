@@ -52,11 +52,6 @@ img {
 	border-radius: 10px;
 }
 
-/**
-#user-stats-table tr, td {
-	border: 1px solid white;
-}
-*/
 
 #user-stats-table tr {
 	padding: 3px;
@@ -64,8 +59,11 @@ img {
 }
 
 #user-stats-table td {
-	font-size: 12px;
+	font-size: 10px;
 	padding: 3px;
+	color: #DDEDE2;
+	text-transform: uppercase;
+	font-family: 'Audiowide', sans-serif;
 }
 
 .col-one {
@@ -77,6 +75,7 @@ img {
 	background-color: rgba(0, 0, 0, .7);
 	padding: 20px;
 	border-radius: 10px;
+	color: #E1EBE4;
 }
 
 #post-history {
@@ -84,6 +83,7 @@ img {
 	padding: 20px;
 	border-radius: 10px;
 	margin-top: 10px;
+	color: #E1EBE4;
 }
 
 .history {

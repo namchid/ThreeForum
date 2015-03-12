@@ -10,6 +10,7 @@
 	<script src="resources/scripts/matrix.js" type="text/javascript"></script>
 	<script type="text/javascript" src="resources/scripts/loadForm.js"></script>
 	<script type="text/javascript" src="resources/scripts/loginForum.js"></script>
+	<script type="text/javascript" src="resources/scripts/newUser.js"></script>
 </head>
 <body>
 	<form id="user-form">
