@@ -27,13 +27,13 @@ var result_login;
   xmlhttp.open("GET","../Forum/resources/php/loginCheck.php?username="+username+"&password="+password,false); 
   xmlhttp.send();    
 
-console.log(result_login); 
-if (result_login=="good"){
-document.loginform.action="forum.php";
-document.loginform.submit(); 
+ 
+	if (result_login=="good"){
+		document.loginform.action="forum.php";
+		document.loginform.submit(); 
   }
-else 
-alert("Please enter a username and password.");
+	else 
+		alert("Please enter username and password.");
 
 
 }

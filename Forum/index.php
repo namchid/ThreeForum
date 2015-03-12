@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 	<script src="resources/scripts/matrix.js" type="text/javascript"></script>
 	<script type="text/javascript" src="resources/scripts/loadForm.js"></script>
+	<script type="text/javascript" src="resources/scripts/loginForum.js"></script>
 </head>
 <body>
 	<form id="user-form">
