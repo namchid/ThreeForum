@@ -22,7 +22,6 @@ header {
 }
 
 #mainContainer {
-/**	background-color: #0E0E0E; */
 	width: 100%;
 	min-height: 700px;
 	text-align: center;
@@ -32,24 +31,26 @@ header {
 	border-bottom-left-radius: 25px;
 	border-bottom-right-radius: 25px;
 /**
-background: rgba(76,76,76,1);
-background: -moz-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(36,36,36,1) 0%, rgba(105,105,105,0.94) 39%, rgba(122,122,122,0.92) 50%, rgba(128,128,128,0.92) 51%, rgba(89,89,89,0.9) 60%, rgba(28,28,28,0.85) 91%, rgba(19,19,19,0.84) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(76,76,76,1)), color-stop(0%, rgba(36,36,36,1)), color-stop(39%, rgba(105,105,105,0.94)), color-stop(50%, rgba(122,122,122,0.92)), color-stop(51%, rgba(128,128,128,0.92)), color-stop(60%, rgba(89,89,89,0.9)), color-stop(91%, rgba(28,28,28,0.85)), color-stop(100%, rgba(19,19,19,0.84)));
-background: -webkit-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(36,36,36,1) 0%, rgba(105,105,105,0.94) 39%, rgba(122,122,122,0.92) 50%, rgba(128,128,128,0.92) 51%, rgba(89,89,89,0.9) 60%, rgba(28,28,28,0.85) 91%, rgba(19,19,19,0.84) 100%);
-background: -o-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(36,36,36,1) 0%, rgba(105,105,105,0.94) 39%, rgba(122,122,122,0.92) 50%, rgba(128,128,128,0.92) 51%, rgba(89,89,89,0.9) 60%, rgba(28,28,28,0.85) 91%, rgba(19,19,19,0.84) 100%);
-background: -ms-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(36,36,36,1) 0%, rgba(105,105,105,0.94) 39%, rgba(122,122,122,0.92) 50%, rgba(128,128,128,0.92) 51%, rgba(89,89,89,0.9) 60%, rgba(28,28,28,0.85) 91%, rgba(19,19,19,0.84) 100%);
-background: linear-gradient(to right, rgba(76,76,76,1) 0%, rgba(36,36,36,1) 0%, rgba(105,105,105,0.94) 39%, rgba(122,122,122,0.92) 50%, rgba(128,128,128,0.92) 51%, rgba(89,89,89,0.9) 60%, rgba(28,28,28,0.85) 91%, rgba(19,19,19,0.84) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+background: rgba(15,15,15,1);
+background: -moz-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(13,13,13,0.98) 12%, rgba(18,18,18,0.97) 25%, rgba(18,18,18,0.95) 39%, rgba(28,28,28,0.93) 50%, rgba(28,28,28,0.93) 51%, rgba(26,25,26,0.92) 60%, rgba(15,15,15,0.89) 76%, rgba(13,13,13,0.87) 91%, rgba(10,10,10,0.86) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(15,15,15,1)), color-stop(12%, rgba(13,13,13,0.98)), color-stop(25%, rgba(18,18,18,0.97)), color-stop(39%, rgba(18,18,18,0.95)), color-stop(50%, rgba(28,28,28,0.93)), color-stop(51%, rgba(28,28,28,0.93)), color-stop(60%, rgba(26,25,26,0.92)), color-stop(76%, rgba(15,15,15,0.89)), color-stop(91%, rgba(13,13,13,0.87)), color-stop(100%, rgba(10,10,10,0.86)));
+background: -webkit-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(13,13,13,0.98) 12%, rgba(18,18,18,0.97) 25%, rgba(18,18,18,0.95) 39%, rgba(28,28,28,0.93) 50%, rgba(28,28,28,0.93) 51%, rgba(26,25,26,0.92) 60%, rgba(15,15,15,0.89) 76%, rgba(13,13,13,0.87) 91%, rgba(10,10,10,0.86) 100%);
+background: -o-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(13,13,13,0.98) 12%, rgba(18,18,18,0.97) 25%, rgba(18,18,18,0.95) 39%, rgba(28,28,28,0.93) 50%, rgba(28,28,28,0.93) 51%, rgba(26,25,26,0.92) 60%, rgba(15,15,15,0.89) 76%, rgba(13,13,13,0.87) 91%, rgba(10,10,10,0.86) 100%);
+background: -ms-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(13,13,13,0.98) 12%, rgba(18,18,18,0.97) 25%, rgba(18,18,18,0.95) 39%, rgba(28,28,28,0.93) 50%, rgba(28,28,28,0.93) 51%, rgba(26,25,26,0.92) 60%, rgba(15,15,15,0.89) 76%, rgba(13,13,13,0.87) 91%, rgba(10,10,10,0.86) 100%);
+background: linear-gradient(to right, rgba(15,15,15,1) 0%, rgba(13,13,13,0.98) 12%, rgba(18,18,18,0.97) 25%, rgba(18,18,18,0.95) 39%, rgba(28,28,28,0.93) 50%, rgba(28,28,28,0.93) 51%, rgba(26,25,26,0.92) 60%, rgba(15,15,15,0.89) 76%, rgba(13,13,13,0.87) 91%, rgba(10,10,10,0.86) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#0a0a0a', GradientType=1 );
+
 */
 
-background: rgba(76,76,76,1);
-background: -moz-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(36,36,36,1) 0%, rgba(105,105,105,0.85) 39%, rgba(122,122,122,0.81) 50%, rgba(128,128,128,0.81) 51%, rgba(89,89,89,0.77) 60%, rgba(28,28,28,0.65) 91%, rgba(19,19,19,0.62) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(76,76,76,1)), color-stop(0%, rgba(36,36,36,1)), color-stop(39%, rgba(105,105,105,0.85)), color-stop(50%, rgba(122,122,122,0.81)), color-stop(51%, rgba(128,128,128,0.81)), color-stop(60%, rgba(89,89,89,0.77)), color-stop(91%, rgba(28,28,28,0.65)), color-stop(100%, rgba(19,19,19,0.62)));
-background: -webkit-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(36,36,36,1) 0%, rgba(105,105,105,0.85) 39%, rgba(122,122,122,0.81) 50%, rgba(128,128,128,0.81) 51%, rgba(89,89,89,0.77) 60%, rgba(28,28,28,0.65) 91%, rgba(19,19,19,0.62) 100%);
-background: -o-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(36,36,36,1) 0%, rgba(105,105,105,0.85) 39%, rgba(122,122,122,0.81) 50%, rgba(128,128,128,0.81) 51%, rgba(89,89,89,0.77) 60%, rgba(28,28,28,0.65) 91%, rgba(19,19,19,0.62) 100%);
-background: -ms-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(36,36,36,1) 0%, rgba(105,105,105,0.85) 39%, rgba(122,122,122,0.81) 50%, rgba(128,128,128,0.81) 51%, rgba(89,89,89,0.77) 60%, rgba(28,28,28,0.65) 91%, rgba(19,19,19,0.62) 100%);
-background: linear-gradient(to right, rgba(76,76,76,1) 0%, rgba(36,36,36,1) 0%, rgba(105,105,105,0.85) 39%, rgba(122,122,122,0.81) 50%, rgba(128,128,128,0.81) 51%, rgba(89,89,89,0.77) 60%, rgba(28,28,28,0.65) 91%, rgba(19,19,19,0.62) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+background: rgba(15,15,15,1);
+background: -moz-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(13,13,13,0.98) 12%, rgba(18,18,18,0.97) 25%, rgba(18,18,18,0.95) 39%, rgba(28,28,28,0.93) 50%, rgba(28,28,28,0.93) 51%, rgba(26,25,26,0.92) 60%, rgba(15,15,15,0.89) 76%, rgba(13,13,13,0.87) 91%, rgba(10,10,10,0.56) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(15,15,15,1)), color-stop(12%, rgba(13,13,13,0.98)), color-stop(25%, rgba(18,18,18,0.97)), color-stop(39%, rgba(18,18,18,0.95)), color-stop(50%, rgba(28,28,28,0.93)), color-stop(51%, rgba(28,28,28,0.93)), color-stop(60%, rgba(26,25,26,0.92)), color-stop(76%, rgba(15,15,15,0.89)), color-stop(91%, rgba(13,13,13,0.87)), color-stop(100%, rgba(10,10,10,0.56)));
+background: -webkit-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(13,13,13,0.98) 12%, rgba(18,18,18,0.97) 25%, rgba(18,18,18,0.95) 39%, rgba(28,28,28,0.93) 50%, rgba(28,28,28,0.93) 51%, rgba(26,25,26,0.92) 60%, rgba(15,15,15,0.89) 76%, rgba(13,13,13,0.87) 91%, rgba(10,10,10,0.56) 100%);
+background: -o-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(13,13,13,0.98) 12%, rgba(18,18,18,0.97) 25%, rgba(18,18,18,0.95) 39%, rgba(28,28,28,0.93) 50%, rgba(28,28,28,0.93) 51%, rgba(26,25,26,0.92) 60%, rgba(15,15,15,0.89) 76%, rgba(13,13,13,0.87) 91%, rgba(10,10,10,0.56) 100%);
+background: -ms-linear-gradient(left, rgba(15,15,15,1) 0%, rgba(13,13,13,0.98) 12%, rgba(18,18,18,0.97) 25%, rgba(18,18,18,0.95) 39%, rgba(28,28,28,0.93) 50%, rgba(28,28,28,0.93) 51%, rgba(26,25,26,0.92) 60%, rgba(15,15,15,0.89) 76%, rgba(13,13,13,0.87) 91%, rgba(10,10,10,0.56) 100%);
+background: linear-gradient(to right, rgba(15,15,15,1) 0%, rgba(13,13,13,0.98) 12%, rgba(18,18,18,0.97) 25%, rgba(18,18,18,0.95) 39%, rgba(28,28,28,0.93) 50%, rgba(28,28,28,0.93) 51%, rgba(26,25,26,0.92) 60%, rgba(15,15,15,0.89) 76%, rgba(13,13,13,0.87) 91%, rgba(10,10,10,0.56) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#0a0a0a', GradientType=1 );
+
 
 
 }
@@ -130,39 +131,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 	}
 }
 
-/**
-#pageNav {
-        list-style: none;
-        overflow: hidden;
-        font-size: 14px;
-	width: 100%;
-}
-
-#pageNav li {
-	float: left;
-	color: #aad5c0;
-        text-decoration: none;
-        padding: 10px 0 10px 65px;
-        background: green;
-        background: #2d8058;
-        position: relative;
-        display: block;
-        float: left;
-        text-transform: lowercase;
-}
-/**
-#pageNav li a {
-        color: #aad5c0;
-        text-decoration: none;
-        padding: 10px 0 10px 65px;
-        background: green;
-        background: #2d8058;
-        position: relative;
-        display: block;
-        float: left;
-        text-transform: lowercase;
-}
-*/
 
 #pageNav {
     width: 95%;
@@ -218,7 +186,7 @@ h2 {
 	border-right: 6px solid #5A7248;
 	border-bottom: 6px solid #5A7248;
 	text-transform: uppercase;
-	background: #66B4BD;
+	background: #80A37E;
 	color: white;
 }
 
@@ -230,7 +198,6 @@ a.category {
 	font-family: 'Cutive Mono', sans-serif;
 	border: 1px solid transparent;
 	text-decoration: none;
-	color: black;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -244,62 +211,6 @@ a.category:hover {
 	font-size: 22px;
 }
 
-/**
-.topics {
-	text-align: left;
-	width: 95%;
-    	float: left;
-    	margin: 20px 40px 0 40px;
-   	padding: 0;
-    	background-color: white;
-    	border-bottom: 1px solid #555;
-	border-radius: 15px;
-	background-color: white;
-	overflow:hidden;
-}
-
-*/
-
-/**
-.topics ul {
-    	list-style: none;
-    	margin: 0 auto;
-    	padding: 0;
-}
-
-.topics ul li {
-    	float: left;
-    	text-decoration: none;
-    	color: black;
-    	padding: 5px 15px;
-	font-family: 'Cutive Mono', sans-serif;
-}
-
-.topics ul li:first-child {
-	border-top-left-radius: 15px;
-	border-bottom-left-radius: 15px;
-    	border-right: 1px solid #555;
-	width: 50%;
-}
-
-.topics ul li:nth-child(2) {
-        width: 10%;
-    	border-right: 1px solid #555;
-}
-
-.topics ul li: last-child {
-	max-width: 40%;
-}
-
-.topics #pageNav ul li a {
-    display: block;
-}
-
-.topics:hover {
-	background-color: red;
-}
-
-*/
 
 table#forum-2-table {
 	width: 95%;
@@ -311,7 +222,7 @@ table#forum-2-table {
 table#forum-2-table .topic:hover {
 	background-color: #222;
 	cursor: pointer;
-	color: #4BD145;
+	color: green !important;
 }
 
 table#forum-2-table th {
@@ -328,7 +239,7 @@ table#forum-2-table td, table#forum-2-table th {
 }
 
 .topic-title a:hover {
-	color: white; /** todo: change color later */
+	color: gold; /** todo: change color later */
 }
 
 .add-area {
@@ -373,6 +284,7 @@ table#forum-2-table td, table#forum-2-table th {
 	font-weight: bold;
 	border-collpase: collapse;
 	background-color: transparent;
+/*	color: #829681; */
 }
 
 
