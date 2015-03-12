@@ -20,20 +20,26 @@
 			<div id="about-us-area">
 				<div id="brittney">
 					<div class="picture">
-						<img src="resources/images/Grumpy_Cat.png">
+						<img src="resources/images/doge.png">
 					</div>
 					<div class="about-worker-ant">
 						<h5>Brittney</h5>
-						This is what Brittney did.
+						<h6>The Data Hoarder</h6>
+						Created database and queries.
+						<br>
+						Contact on <a href="http://goo.gl/M7OB66">LinkedIn</a>
 					</div>
 				</div>
 				<div id="hayden">
 					<div class="picture">
-						<img src="resources/images/Grumpy_Cat.png">
+						<img src="resources/images/philosoraptor.png">
 					</div>
 					<div class="about-worker-ant">
 						<h5>Hayden</h5>
-						This is what Hayden did.
+						<h6>The Intermediate</h6>
+						Linked front end to back end.
+						<br>
+						Contact on <a href="http://goo.gl/TEoot4">LinkedIn</a>
 					</div>
 				</div>
 				<div id="namchi">
@@ -43,13 +49,16 @@
 					</div>
 					<div class="about-worker-ant">
 						<h5>Namchi</h5>
-						This is what Namchi did.
+						<h6>The Website Beautician</h6>
+						Made the website bearable to look at.
+						<br>
+						Contact on <a href="http://goo.gl/ka8Zy8">LinkedIn</a>
 					</div>
 					</div>
 				</div>
 			</div>
-		<div class="subtitle">Credits / Resources</div>
         	<div id="resources-area">
+		<div class="subtitle">Credits / Resources</div>
 			<ul id="resources">
 				<li>Fonts from <a href="http://www.google.com/fonts/">Google Fonts</a></li>
 				<li>Gradient background <a href="http://cssmatic.com/gradient-generator">generator</a></li>
