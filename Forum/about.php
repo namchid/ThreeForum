@@ -51,11 +51,12 @@
 		<div class="subtitle">Credits / Resources</div>
         	<div id="resources-area">
 			<ul id="resources">
+				<li>Fonts from <a href="http://www.google.com/fonts/">Google Fonts</a></li>
 				<li>Gradient background <a href="http://cssmatic.com/gradient-generator">generator</a></li>
 				<li>Background matrix based on <a href="http://goo.gl/2xa7en">this awesome tutorial</a></li>
 				<li>Menu modified from <a href="http://cssmenumaker.com/menu/opera-drop-down-menu">this one</a> from CSS Menu Builder</li>
+				<li>Responsive layout / media queries from <a href="http://codepen.io/Cheesetoast/pen/KFAaq?editors=110">this tutorial</a></li>
 				<li>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></li>
-
 			</ul>
 		</div>
 	</div>

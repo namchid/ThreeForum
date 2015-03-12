@@ -52,7 +52,6 @@ background: linear-gradient(to right, rgba(15,15,15,1) 0%, rgba(13,13,13,0.98) 1
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#0a0a0a', GradientType=1 );
 
 
-
 }
 
 .breadcrumb {
@@ -125,12 +124,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', end
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 700px) {
-	.breadcrumb {
+@media screen and (max-width: 980px) {
+	.topic-replies {
+		display: none;		
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.topic-views {
 		display: none;
 	}
 }
 
+@media screen and (max-width: 700px) {
+	.breadcrumb {
+		display: none;
+	}
+
+	.topic-start-date {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	.topic-last {
+		display: none;
+	}
+}
+
+
+/* end MEDIA QUERIES */
 
 #pageNav {
     width: 95%;
