@@ -49,18 +49,18 @@ $current_month = (int)date("m");
 
 $last_post = "";
 if($current_day - $last_day)
-    $last_post = $current_day-$last_day . ' day(s) ' .$last_post;
+    $last_post = (int)($current_day - $last_day) . ' day(s) ' .$last_post;
 if($current_month - $last_month)
-    $last_post = $last_post .' '. $current_month-$last_month .' month(s)';
+    $last_post = $last_post .' '. (int)($current_month - $last_month) .' month(s)';
 if($current_year - $last_year)
-    $last_post = $last_post .' '. $current_year - $last_year .' year(s)' ;
-if($current_day-$last_day || $current_month-$last_month || $current_year-$last_year)
+    $last_post = $last_post .' '. (int)($current_year - $last_year) .' year(s)' ;
+if($current_day-$last_day || $current_month-$last_month || $current_year-$last_year) {
     $last_post = $last_post . " ago";
+    $last_post = $last_month. '-'.$last_day.'-'.$last_year ;
+    }
 else
     $last_post = "today";
 
-EchoH2($last_temp[1]);
-EchoH2($current_month);
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
