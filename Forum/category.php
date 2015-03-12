@@ -80,9 +80,6 @@ $starting_limit = ((int)$page -1) * (int)$topics_per_page ;
 
     ?>
 
-
-    <form method="post" id="toTopic" action="posts.php">
-
     <table id="forum-2-table">
         <tr>
             <th class="topic-title">Title</th>
@@ -133,11 +130,12 @@ $starting_limit = ((int)$page -1) * (int)$topics_per_page ;
             }
         $result->close();
 
+        echo '    <form method="post" id="toTopic" action="posts.php">' ;
         echoHiddenInput("topic_id", "-1");
         echoHiddenInput("page", "1");
+        echo ' </form>';
         ?>
     </table>
-    </form>
     <canvas id="c" z-index="-2"></canvas>
 
 </div>

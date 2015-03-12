@@ -29,5 +29,9 @@ function EchoClickPostScript($clickSelector,$formId,array $ids, array $values){
 }
 
 function echoHiddenInput($name, $value){
-    echo ' <input id="'.$name.'" type="hidden" name ="'.$name.'" value="'.$value.'" style="display:none" >';
+    echo ' <input id="'.$name.'" type="hidden" name ="'.$name.'" value ="'.$value.'" style="display:none" >';
+}
+
+function EchoH2($str){
+    echo '<h2>'. $str .'</h2>';
 }

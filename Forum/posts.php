@@ -74,6 +74,7 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
 		    </div>
         ';
         EchoForm("posts.php","pagesForm",$pagenames,$pagevals);
+        EchoForm("profile.php","profileForm", array("user_id"), array("x"));
         ?>
 
 		<div id="posts">
@@ -87,7 +88,7 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
 
                     $userquery = ' SELECT * FROM users WHERE user_id = "'.$row['user_id'].'" ;';
                     $userresult = mysqli_query($connect,$userquery);
-                    $username = "";
+                    $username =  "";
                     while($user = mysqli_fetch_array($userresult)) {
                         if($user['user_name'] != "")
                             $username = $user['user_name'];
@@ -105,7 +106,7 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
 		    		</tr>
 			    	<tr>
 					<td colspan="3" class="edit-post">
-                       <span class="username-field">'.$username.'</span>
+                       <span class="username-field" title="'.$row['user_id'].'">'.$username.'</span>
                        <span class="edit" onclick="updatePostLabel()">edit post</span>
                     </td>
 
@@ -137,6 +138,11 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
                $("#pageVal").val( this.title);
 
             document.getElementById('pagesForm').submit();
+        });
+        $('*.username-field').click(function (event){
+            var userid = event.target.title;
+            $('#user_id').val(userid);
+            document.getElementById('profileForm').submit();
         });
     });
 </script>
