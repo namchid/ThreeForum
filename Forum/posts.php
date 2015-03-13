@@ -11,6 +11,9 @@ $postsperpage = 10;
 $page = "1";
 $page = $_POST['page'];
 (int)$numpages = 1;
+$user_id = 1;
+if(is_numeric($_SESSION['user_id']))
+    $user_id = $_SESSION['user_id'];
 $startinglimit = ((int)$page -1) * (int)$postsperpage ;
 ?>
     <!DOCTYPE HTML>
@@ -29,6 +32,19 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
         <script type="text/javascript" src="resources/scripts/setUpNavigation-forum.js"></script>
         <script type="text/javascript" src="resources/scripts/posts.js"></script>
         <script type="text/javascript" src="resources/scripts/inner-matrix.js"></script>
+        <script type="text/javascript" src="resources/scripts/addPost.js"></script>
+        <script type="text/javascript" src="resources/tinymce/js/tinymce/tinymce.min.js"></script>
+        <script type="text/javascript">
+            tinymce.init({
+                selector: "textarea",
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table contextmenu paste"
+                ],
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+            });
+        </script>
     </head>
     <body>
     <div id="navBar"></div>
@@ -62,6 +78,8 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
             <li><a>Posts</a></li>
         </ul>
         <?php
+
+
         $countquery =' SELECT count(*) AS cnt FROM posts WHERE topic_id = "'.$topic_id.'" ORDER BY post_id ASC ;';
         $countresult = mysqli_query($connect, $countquery);
         $realcount = "0";
@@ -73,21 +91,24 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
             $numpages= intval($numpages +1);
         $countresult->close();
         $pagenames = array("page","topic_id");
-        $pagevals = array("1",     $topic_id);
-        echo'<div id="pageNav">
+        $pagevals = array( $page,  $topic_id);
+
+        echo'<div id="pageNav" title ="'.$realcount.'" data-last_page="'.$numpages.'">
 			    <ul>
-			    	<li>page '.$page.' of '.$numpages.'</li> ';
+			    	<li id="currentPageNum" title="'.$page.'">page '.$page.' of '.$numpages.'</li> ';
         for ($i =1; $i <= $numpages; $i++){
             echo'<li class="page" value="'.$i.'" title ="'.$i.'"><a class="current" href="#">'.($i).'</a></li>';
         }
         echo'	</ul>
 		    </div>
         ';
+
         EchoForm("posts.php","pagesForm",$pagenames,$pagevals);
         EchoForm("profile.php","profileForm", array("user_id"), array("x"));
         EchoForm("category.php","categoryForm", array("cat_id","cat_name","board_id","board_name","myPage"), array($cat_id, $cat_name, $board_id, $board_name,"1"));
-        ?>
 
+        ?>
+        <div id="hiddenPost" style ="display:none;"><h2>shouldn't see this</h2>  </div>
         <div id="posts">
             <table id="posts-table">
                 <?php
@@ -105,18 +126,19 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
                     $userresult->close();
                     echo '
                     <tr>
-					<td class="user">
-						<img src="resources/images/aang.png" class="user-image">
-					</td>
 					<td class="message-body">
 						'.$row['post_content'].'
 					</td>
-					<td class="post-num">#'.((int)$postcount * (int)$page).'</td>
+					<td class="post-num">#'.((int)$postcount + ((int)$page - 1) * $postsperpage).'</td>
 		    		</tr>
 			    	<tr>
 					<td colspan="3" class="edit-post">
-                       <span class="username-field" title="'.$row['user_id'].'">'.$username.'</span>
-                       <span class="edit" onclick="updatePostLabel()">edit post</span>
+                       <span class="username-field" title="'.$row['user_id'].'">'.$username.'</span>';
+                    if($user_id == $row['user_id'])
+                       echo '<span class="edit" data-post_id ="'.$row['post_id'].'" onclick="updatePostLabel()">edit post</span> ';
+                    else
+                        echo '<span class="" onclick=""> </span> ';
+                    echo '
                     </td>
 			    	</tr>
                     ';
@@ -129,9 +151,15 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
         </div>
         <h3 id="new-post-label">New Post</h3>
         <div id="post-form-area">
-            <form action="" method="post" id="post-form">
+            <form action="resources/php/addPost.php" method="post" id="post-form">
+                <?php
+                    echoHiddenInput("topic_id_post",$topic_id);
+                    echoHiddenInput("user_id_post",$user_id);
+                    echoHiddenInput("formatted_input","   ");
+                    echoHiddenInput("page_post",$page);
+                ?>
                 <textarea rows="3" type="text" name="new-post" id="new-topic-post" form="post-form" placeholder="say something"></textarea>
-                <button type="submit" name="submit-topic" class="submit-post-button">No Takebacks, OK?</button>
+                <button name="submit-topic" class="submit-post-button" id="post_submit_bttn" data-post_id="-1">No Takebacks, OK?</button>
             </form>
         </div>
     </div>
@@ -139,9 +167,11 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
     </body>
     </html>
     <script type="text/javascript">
+        var add_mode = true;
+
         $(document).ready(function () {
             $('#pageNav li.page').click(function (event){
-                document.getElementById("pageNav").value = this.value;
+                document.getElementById("page").value = this.value;
                 if(this.value <= 0)
                     $("#pageVal").val( this.title);
                 document.getElementById('pagesForm').submit();
@@ -154,6 +184,52 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
             $('*.toCategory').click(function (event){
                 document.getElementById('categoryForm').submit();
             });
+            $('span.edit').click(function (event) {
+                add_mode = !add_mode;
+                var post_id = $(event.target).attr('data-post_id') ;
+                $("#post_submit_bttn").attr('data-post_id', post_id);
+            });
+
+            $('#post_submit_bttn').click(function(event){
+                event.preventDefault();
+
+                var user_id = $('user_id_post').val();
+                user_id = 1;
+                var post_val = $('#topic_id_post').val();
+                var page = $('#currentPageNum').attr("title") ;
+                var t = event.target;
+                var post_id =  $(t).attr("data-post_id");
+                if(add_mode)
+                    post_id = "-1";
+
+                // console.log("pageNum passed: "+ page)
+                var input= document.getElementById("formatted_input").value = tinymce.activeEditor.getContent();
+                $.post('resources/php/addPost.php', { 'topic_id_post': post_val, 'user_id_post': user_id, 'formatted_input':input,'page_post': page,
+                                                        'add_mode':add_mode, post_id:post_id }, setcontent);
+                //document.getElementById('post-form').submit();
+            });
+            function setcontent(data) {
+              //  $('#hiddenPost').html(data);
+                var post_title = $('#pageNav').attr("title");
+                var post_count = post_title;
+                var page_int = parseInt( $("#page").val() );
+                var last_page = parseInt( $("#pageNav").attr("data-last_page"));
+
+                var page_pass = page_int;
+                if(post_count % 10 == 0){
+                    page_pass = last_page +1 ;
+                }
+                else if(page_int < last_page){
+                    page_pass = last_page;
+                }
+                if(!add_mode) {
+                    page_pass = page_int;
+                }
+
+                $("#page").val( page_pass);
+                document.getElementById('pagesForm').submit();
+            }
+
         });
     </script>
 
