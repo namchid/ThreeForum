@@ -28,5 +28,5 @@
 		</li>
 	</ul>
 	<canvas id="c"></canvas>
-<body>
+</body>
 </html>

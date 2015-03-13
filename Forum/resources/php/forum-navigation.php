@@ -6,7 +6,7 @@ echo "<div id='cssmenu'>";
 echo "<ul>";
    echo "<li class='has-sub'><a href='profile.php'><span>My Profile</span></a>";
 	echo "<ul>";
-		echo "<li><a href='index.php'><span>Logout</span></a></li>";
+		echo "<li><a href='index.php'>"; include("logout_insert.php"); echo "</a></li>";
 	echo "</ul>";
 
    echo "</li>";
