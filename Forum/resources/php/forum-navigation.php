@@ -4,18 +4,15 @@ echo "<header>ThreeForum</header>";
 
 echo "<div id='cssmenu'>";
 echo "<ul>";
-   echo "<li><a href='#Profile'><span>My Profile</span></a></li>";
-   echo "<li class='active has-sub'><a href='forum.php'><span class='current'>Forum</span></a>";
-      echo "<ul>";
-         echo "<li><a href='#'><span>Product 1</span></a>";
-         echo "</li>";
-         echo "<li><a href='#'><span>Product 2</span></a>";
-         echo "</li>";
-      echo "</ul>";
+   echo "<li class='has-sub'><a href='profile.php'><span>My Profile</span></a>";
+	echo "<ul>";
+		echo "<li><a href='index.php'><span>Logout</span></a></li>";
+	echo "</ul>";
+
    echo "</li>";
-   echo "<li><a href='#'><span>About</span></a></li>";
-   echo "<li><a href='#'><span>Sources</span></a></li>";
-echo "<li class='last'><a href='#'><span>Contact</span></a></li>";
+   echo "<li class='active'><a href='forum.php'><span class='current'>Forum</span></a>";
+   echo "</li>";
+   echo "<li class='last'><a href='about.php'><span>About ThreeForum</span></a></li>";
 echo "</ul>";
 echo "</div>";
 	
