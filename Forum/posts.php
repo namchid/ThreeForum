@@ -1,19 +1,3 @@
-<?php
-/** * User: Hayden H */
-?>
-
-<?php
-include_once("functions.php");
-include_once("connect.php");
-
-$topic_id ="";
-$topic_id = $_POST['topic_id'];
-$postsperpage = 10;
-$page = "1";
-$page = $_POST['page'];
-(int)$numpages = 1;
-$startinglimit = ((int)$page -1) * (int)$postsperpage ;
-?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -34,105 +18,49 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
 <body>
 	<div id="navBar"></div>
 	<div id="mainContainer">
-        <?php
-        $topic_name = "n/a";
-        $query_topic_name = 'SELECT * FROM topics WHERE topic_id = '.$topic_id.' ;';
-        $result_topic_name = mysqli_query($connect, $query_topic_name);
-        while($row_topic_name = mysqli_fetch_array($result_topic_name)) {
-            $topic_name = $row_topic_name['topic_subject'];
-        }
-        $result_topic_name->close();
-
-        $board_id = $board_name = $cat_name = $cat_id = "X";
-        $query_cat_board = ' SELECT c.*, b.* FROM topics t
-                        INNER JOIN categories c ON t.cat_id = c.cat_id
-                        INNER JOIN boards b ON c.board_id = b.board_id
-                        WHERE t.topic_id = '.$topic_id.';';
-        $result_cat_board = mysqli_query($connect, $query_cat_board);
-        while($row_cb = mysqli_fetch_array($result_cat_board)){
-            $board_id = $row_cb['board_id'];
-            $board_name = $row_cb['board_name'];
-            $cat_name = $row_cb['cat_name'];
-            $cat_id = $row_cb['cat_id'];
-        }
-        ?>
-
-		<div class="subtitle"><?php echo $topic_name ?></div>
+		<div class="subtitle">The Horrors of Debugging PHP</div>
 		<ul class="breadcrumb">
 			<li><a href="forum.php">Forum</a></li>
-			<li><a href="#" class="toCategory">Category</a></li>
+			<li><a href="forum-2.php">Category</a></li>
 			<li><a>Posts</a></li> 
 		</ul>
-        <?php
-
-        $countquery =' SELECT count(*) AS cnt FROM posts WHERE topic_id = "'.$topic_id.'" ORDER BY post_id ASC ;';
-        $countresult = mysqli_query($connect, $countquery);
-        $realcount = "0";
-        while($countrow = mysqli_fetch_array($countresult)) {
-            $realcount = $countrow['cnt'];
-        }
-        (int)$numpages = (int)$realcount / (int)$postsperpage;
-        if($numpages > intval($numpages))
-            $numpages= intval($numpages +1);
-        $countresult->close();
-
-
-        $pagenames = array("page","topic_id");
-        $pagevals = array("1",     $topic_id);
-        echo'<div id="pageNav">
-			    <ul>
-			    	<li>page '.$page.' of '.$numpages.'</li> ';
-                    for ($i =1; $i <= $numpages; $i++){
-                        echo'<li class="page" value="'.$i.'" title ="'.$i.'"><a class="current" href="#">'.($i).'</a></li>';
-                    }
-		    echo'	</ul>
-		    </div>
-        ';
-        EchoForm("posts.php","pagesForm",$pagenames,$pagevals);
-        EchoForm("profile.php","profileForm", array("user_id"), array("x"));
-        EchoForm("category.php","categoryForm", array("cat_id","cat_name","board_id","board_name","myPage"), array($cat_id, $cat_name, $board_id, $board_name,"1"));
-        ?>
-
+		<div id="pageNav">
+			<ul>
+				<li>page 1 of 1</li>
+				<li><a class="current" href="">1</a></li>
+			</ul>
+		</div>
 		<div id="posts">
-			<table id="posts-table">
-                <?php
-
-                $postquery = ' SELECT * FROM posts WHERE topic_id = "'.$topic_id.'" ORDER BY post_id ASC  LIMIT '.$startinglimit.', '.$postsperpage.' ;';
-                $postresult = mysqli_query($connect,$postquery);
-                $postcount = 1;
-                while($row = mysqli_fetch_array($postresult)) {
-
-                    $userquery = ' SELECT * FROM users WHERE user_id = "'.$row['user_id'].'" ;';
-                    $userresult = mysqli_query($connect,$userquery);
-                    $username =  "";
-                    while($user = mysqli_fetch_array($userresult)) {
-                        if($user['user_name'] != "")
-                            $username = $user['user_name'];
-                    }
-                    $userresult->close();
-                    echo '
-                    <tr>
-					<td class="user">
-						<img src="resources/images/aang.png" class="user-image">
-					</td>
+			<table class="posts-table">
+				<tr>
 					<td class="message-body">
-						'.$row['post_content'].'
+						<div class="row1">I'm the avatar!</div>
+					</td>		
+					<td class="post-num"><div class="row1">#1</div></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="edit-post">
+                                                <a href="profile.php" class="username-field">aang</a>
+                                                <span class="edit" onclick="updatePostLabel()">edit post</span>
+                                        </td>
+
+				</tr>
+			</table>
+			<table class="posts-table">
+			 	<tr>
+                               	 	<td class="message-body">
+						<div class="row1">
+                                        	Wrong topic, Avatar. I have redeemed my honor!
+						</div>
+                                	</td>           
+                                	<td class="post-num"><div class="row1">#2</div></td>
+                        	</tr>
+                        	<tr> 
+                                	<td colspan="2" class="edit-post">
+                                		<a href="profile.php" class="username-field">zuko</a>
+						<span class="edit" onclick="updatePostLabel()">edit post</span>
 					</td>
-					<td class="post-num">#'.((int)$postcount * (int)$page).'</td>
-		    		</tr>
-			    	<tr>
-					<td colspan="3" class="edit-post">
-                       <span class="username-field" title="'.$row['user_id'].'">'.$username.'</span>
-                       <span class="edit" onclick="updatePostLabel()">edit post</span>
-                    </td>
-
-			    	</tr>
-                    ';
-                    $postcount +=1;
-                }
-                $postresult->close();
-                ?>
-
+                        	</tr>
 			</table>
 		</div>
 		<h3 id="new-post-label">New Post</h3>
@@ -146,24 +74,3 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
 	<canvas id="c"></canvas>
 </body>
 </html>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#pageNav li.page').click(function (event){
-            document.getElementById("pageNav").value = this.value;
-            if(this.value <= 0)
-               $("#pageVal").val( this.title);
-
-            document.getElementById('pagesForm').submit();
-        });
-        $('*.username-field').click(function (event){
-            var userid = event.target.title;
-            $('#user_id').val(userid);
-            document.getElementById('profileForm').submit();
-        });
-        $('*.toCategory').click(function (event){
-            document.getElementById('categoryForm').submit();
-        });
-    });
-</script>
-
-<?php

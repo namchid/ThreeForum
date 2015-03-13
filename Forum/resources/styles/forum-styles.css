@@ -293,8 +293,8 @@ table#forum-2-table td, table#forum-2-table th {
 .posts-table {
 	width: 100%;
 	margin-top: 20px;
-	border: 1px solid white;
-	border-radius: 15px;
+	border: 1px solid gray;
+	border-radius: 5px;
 }
 
 #posts:first-child {
@@ -311,7 +311,7 @@ table#forum-2-table td, table#forum-2-table th {
 /*	color: #829681; */
 }
 
-
+/**
 .user {
 	width: 100px;
 	background-color: #222;
@@ -324,35 +324,47 @@ table#forum-2-table td, table#forum-2-table th {
 	border-radius: 50px;
 }
 
+*/
+
 .edit-post {
 	text-align: right;
 	color: black;
-	background-color: #707D74;
+	background-color: #4DAB6E;
 	padding: 3px;
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 
 .edit:hover {
-	color: purple;
+	color: gold;
 	cursor: pointer;
 }
 
 .message-body {
-	color: #CED6D0;
+	color: black;
 	text-weight: 400;
-	background-color: #2B2B2B;
+	background-color: rgba(230, 220, 210, 0.7);
+	text-align: left;
+	padding: 10px;
 }
 
+.row1 {
+	min-height: 100px;
+}
+
+a:hover {
+	color: gold;
+}
 .post-num {
 	width: 50px;
-	border-top-right-radius: 10px;
+	border-top-right-radius: 5px;
 	font-size: 12px;
-	background-color: #2B2B2B;
+	color: black;
+	background-color: rgba(230, 220, 210, .6);
 }
 
 .username-field {
-	color: white;
+	color: #092914;
 	float: left;
 }
 
