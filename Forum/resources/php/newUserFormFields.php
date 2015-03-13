@@ -9,4 +9,5 @@
         echo '<input type="password" id="password2" name="password2" placeholder="re-enter password" class="input-fields">';
         echo '<button id="submit-button" onclick="addUser()">join the dark side.</button>';
 	echo '</form>';
+	
 ?>
