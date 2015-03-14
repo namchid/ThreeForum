@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 /** * User: Hayden H */
 ?>
 
@@ -11,9 +14,10 @@ $postsperpage = 10;
 $page = "1";
 $page = $_POST['page'];
 (int)$numpages = 1;
-$user_id = 1;
-if(is_numeric($_SESSION['user_id']))
-    $user_id = $_SESSION['user_id'];
+//$user_id = 1;
+//if(is_numeric($_SESSION['user_id']))
+echo $_SESSION ['user_id'];
+ $user_id = $_SESSION['user_id'];
 $startinglimit = ((int)$page -1) * (int)$postsperpage ;
 ?>
     <!DOCTYPE HTML>
@@ -76,7 +80,7 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
             <li><a href="forum.php">Board:<?php echo ' '.$board_name; ?></a></li>
             <li><a href="#" class="toCategory">Category:<?php echo ' '.$cat_name;?></a></li>
             <li><a>Posts</a></li>
-        </ul>
+        </ul>bpauls@trinity.edu
         <?php
 
 
@@ -193,8 +197,8 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
             $('#post_submit_bttn').click(function(event){
                 event.preventDefault();
 
-                var user_id = $('user_id_post').val();
-                user_id = 1;
+                var user_id = $('#user_id_post').val();
+         
                 var post_val = $('#topic_id_post').val();
                 var page = $('#currentPageNum').attr("title") ;
                 var t = event.target;
