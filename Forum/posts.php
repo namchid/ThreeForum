@@ -73,8 +73,8 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
 
         <div class="subtitle"><?php echo $topic_name ?></div>
         <ul class="breadcrumb">
-            <li><a href="forum.php">Forum</a></li>
-            <li><a href="#" class="toCategory">Category</a></li>
+            <li><a href="forum.php">Board:<?php echo ' '.$board_name; ?></a></li>
+            <li><a href="#" class="toCategory">Category:<?php echo ' '.$cat_name;?></a></li>
             <li><a>Posts</a></li>
         </ul>
         <?php
