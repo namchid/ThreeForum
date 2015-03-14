@@ -36,8 +36,9 @@ var result_login;
   xmlhttp.send();    
 
 console.log(result_login); 
-if (result_login=="good"){
+if (result_login!="bad"){
 document.newUserForm.action="forum.php";
+document.getElementById("hiddenfield").value = result_login;
 document.newUserForm.submit(); 
   }
 else 
