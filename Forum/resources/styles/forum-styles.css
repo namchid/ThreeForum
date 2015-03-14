@@ -364,8 +364,13 @@ a:hover {
 }
 
 .username-field {
-	color: #092914;
+	color:  #092914;
 	float: left;
+}
+
+.username-field:hover {
+	cursor: pointer;
+	color: gold;
 }
 
 h3 {
