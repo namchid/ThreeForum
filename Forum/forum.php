@@ -1,6 +1,7 @@
 <?php 
  session_start();  
- $_SESSION["user_id"] = $_POST["hiddenfield"];
+ if(isset($_SESSION["user_id"]) == false)
+	$_SESSION["user_id"] = $_POST["hiddenfield"];
 ?>
 
 <!DOCTYPE HTML>
