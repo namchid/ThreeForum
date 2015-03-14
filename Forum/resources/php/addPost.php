@@ -13,9 +13,6 @@ $post_id = $_POST['post_id'];
 //echo $input;
 //echo $topic_id;
 
-$user_id =1;
-if(is_numeric($_SESSION['user_id_post']))
-    $user_id = $_SESSION['user_id_post'];
 
 console.log($user_id);
 
