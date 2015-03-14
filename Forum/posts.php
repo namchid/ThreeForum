@@ -14,9 +14,7 @@ $postsperpage = 10;
 $page = "1";
 $page = $_POST['page'];
 (int)$numpages = 1;
-//$user_id = 1;
-//if(is_numeric($_SESSION['user_id']))
-echo $_SESSION ['user_id'];
+
  $user_id = $_SESSION['user_id'];
 $startinglimit = ((int)$page -1) * (int)$postsperpage ;
 ?>
