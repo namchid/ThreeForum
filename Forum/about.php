@@ -36,7 +36,7 @@
 					</div>
 					<div class="about-worker-ant">
 						<h5>Hayden</h5>
-						<h6>The Intermediate</h6>
+						<h6>The Middleman</h6>
 						Linked front end to back end.
 						<br>
 						Contact on <a href="http://goo.gl/TEoot4">LinkedIn</a>
