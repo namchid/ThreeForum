@@ -80,7 +80,7 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
             <li><a href="forum.php">Board:<?php echo ' '.$board_name; ?></a></li>
             <li><a href="#" class="toCategory">Category:<?php echo ' '.$cat_name;?></a></li>
             <li><a>Posts</a></li>
-        </ul>bpauls@trinity.edu
+        </ul>
         <?php
 
 
