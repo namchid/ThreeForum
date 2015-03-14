@@ -110,7 +110,6 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
         ?>
         <div id="hiddenPost" style ="display:none;"><h2>shouldn't see this</h2>  </div>
         <div id="posts">
-            <table id="posts-table">
                 <?php
                 $postquery = ' SELECT * FROM posts WHERE topic_id = "'.$topic_id.'" ORDER BY post_id ASC  LIMIT '.$startinglimit.', '.$postsperpage.' ;';
                 $postresult = mysqli_query($connect,$postquery);
@@ -125,14 +124,16 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
                     }
                     $userresult->close();
                     echo '
-                    <tr>
-					<td class="message-body">
-						'.$row['post_content'].'
-					</td>
-					<td class="post-num">#'.((int)$postcount + ((int)$page - 1) * $postsperpage).'</td>
+                    <table class="posts-table">
+			<tr>
+					<td class="message-body"> ';
+					echo '<div class = "row1">';
+					echo	 $row['post_content'] .'</div>';
+					echo '</td>
+					<td class="post-num"><div class="row1">#'.((int)$postcount + ((int)$page - 1) * $postsperpage).'</div></td>
 		    		</tr>
 			    	<tr>
-					<td colspan="3" class="edit-post">
+					<td colspan="2" class="edit-post">
                        <span class="username-field" title="'.$row['user_id'].'">'.$username.'</span>';
                     if($user_id == $row['user_id'])
                        echo '<span class="edit" data-post_id ="'.$row['post_id'].'" onclick="updatePostLabel()">edit post</span> ';
@@ -143,11 +144,10 @@ $startinglimit = ((int)$page -1) * (int)$postsperpage ;
 			    	</tr>
                     ';
                     $postcount +=1;
+		    echo '<table>';
                 }
                 $postresult->close();
                 ?>
-
-            </table>
         </div>
         <h3 id="new-post-label">New Post</h3>
         <div id="post-form-area">
