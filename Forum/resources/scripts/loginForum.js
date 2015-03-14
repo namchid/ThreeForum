@@ -27,9 +27,10 @@ var result_login;
   xmlhttp.open("GET","../Forum/resources/php/loginCheck.php?username="+username+"&password="+password,false); 
   xmlhttp.send();    
 
- 
-	if (result_login=="good"){
+ console.log(result_login);
+	if (result_login !="bad"){ 
 		document.loginform.action="forum.php";
+                document.getElementById("hiddenfield").value = result_login;
 		document.loginform.submit(); 
   }
 	else 
@@ -37,6 +38,8 @@ var result_login;
 
 
 }
+
+
 
 
 

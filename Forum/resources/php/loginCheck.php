@@ -1,10 +1,10 @@
 <?php  
-session_start();
 
- 
 include_once "connection.php";
 $username = $_GET["username"];
 $password = $_GET["password"];
+
+
 
 $loginQuery = 'SELECT * FROM users WHERE user_name ='.'"'.$username.'"'.'&& user_pass ='.'"'.$password.'"';
 
@@ -27,10 +27,12 @@ function validCred ($retRows,$ret) {
 
 }
 
- $_SESSION['user_id'] = validCred($retRows, $ret);
+$user_id = validCred($retRows, $ret);
 
+
+$_SESSION['user_id'] = $user_id;
 if($retRows == 1)
-  echo "good";
+  echo $user_id;
 else 
   echo "bad";
 ?>

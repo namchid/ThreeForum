@@ -1,3 +1,6 @@
+<?php 
+ session_start();      
+ ?>  
 <!DOCTYPE html>
 <html lang"en">
 <head>
@@ -13,6 +16,7 @@
 	<script type="text/javascript" src="resources/scripts/newUser.js"></script>
 </head>
 <body>
+   <div id="php-insert"></div> 
 	<form id="user-form">
 		<fieldset>
 			<p id="forum-title">ThreeForum</p>

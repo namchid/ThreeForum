@@ -1,3 +1,8 @@
+<?php 
+ session_start();  
+ $_SESSION["user_id"] = $_POST["hiddenfield"];
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
