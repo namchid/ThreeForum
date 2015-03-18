@@ -1,5 +1,9 @@
 <?php 
  session_start();  
+ 
+ if(empty($_POST["hiddenfield"]) && empty($_SESSION["user_id"]))
+       header('Location: index.php'); 
+ 
  if(isset($_SESSION["user_id"]) == false)
 	$_SESSION["user_id"] = $_POST["hiddenfield"];
 ?>
