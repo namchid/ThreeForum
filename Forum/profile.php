@@ -1,8 +1,16 @@
 <?php
+session_start();
+
+if(empty($_SESSION["user_id"]))
+       header('Location: index.php'); 
+
 include_once("functions.php");
 include_once("connect.php");
 $user_id = "";
-$user_id = $_POST["user_id"];
+$user_id = $_SESSION["user_id"];
+$post_id = $_POST["user_id"];
+if((int)$post_id > 0)
+    $user_id = $post_id;
 $recent_limit = 10;
 ?>
 <?php
@@ -30,10 +38,11 @@ while($row_last_post = mysqli_fetch_array($result_last_post)){
     $last_topic = $row_last_post['topic_id'];
 }
 $result_last_post->close();
-$last_temp = explode("-", $last_post_date);
+$last_temp = explode(" ", $last_post_date);
+$last_temp = explode("-", $last_temp[0]);
 $last_year = (int)$last_temp[0];
 $last_month = (int)$last_temp[1];
-$last_day = (int)explode(" ", $last_temp[2])[0];
+$last_day = (int)$last_temp[2];
 $current_year = (int)date("Y");
 $current_day = (int)date("d");
 $current_month = (int)date("m");
@@ -74,7 +83,7 @@ else
     <div id="profile-area">
         <div id="left-panel">
             <div>
-                <img src="resources/images/aang.png">
+               
             </div>
             <div id="stats-area">
                 <table id="user-stats-table">
